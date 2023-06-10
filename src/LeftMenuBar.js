@@ -57,7 +57,7 @@ export default function LeftMenuBar() {
   ];
 
   return (
-    <div style={{ height: "100vh", width: "15%", backgroundColor: "#f2f3f5" }}>
+    <div style={{ height: "100vh", width: "20%", backgroundColor: "#f2f3f5" }}>
       <DisplayMenu list={firstMenu} />
       <hr style={{ margin: "auto 10px" }} />
       <DisplayMenu list={secondMenu} />

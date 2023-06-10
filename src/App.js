@@ -1,6 +1,8 @@
+import React from "react";
+
 import Navbar from "./Navbar";
 import LeftMenuBar from "./LeftMenuBar";
-import "./App.css";
+import Main from "./Main";
 
 function App() {
   return (
@@ -8,7 +10,7 @@ function App() {
       <Navbar />
       <div style={{ display: "flex" }}>
         <LeftMenuBar />
-        Learn React
+        <Main/>
       </div>
     </div>
   );
