@@ -1,11 +1,15 @@
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
+import LeftMenuBar from "./LeftMenuBar";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      Learn React
+      <div style={{ display: "flex" }}>
+        <LeftMenuBar />
+        Learn React
+      </div>
     </div>
   );
 }
