@@ -1,6 +1,7 @@
 import React from "react";
+import CardStyle1 from "./components/CardStyle1";
 
-export default function Main() {
+export default function Trending() {
   const contents = [
     {
       image: "https://shorturl.at/wxIQV",
@@ -46,25 +47,18 @@ export default function Main() {
     },
   ];
   return (
-    <div style={{display: "block", margin: "0 20px"}}>
-      <h2>Recommended</h2>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {contents.map((content) => (
-          <div style={{ margin: "15px" }}>
-            <img
-              src={content.image}
-              alt={contents.title}
-              style={{ width: "320px", height: "220px", borderRadius: "10px" }}
-            />
-            <h1 style={{ margin: 0, padding: 0 }}>{content.title}</h1>
-            <p style={{ margin: 0, padding: 0 }}>{content.detail}</p>
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
-              <p style={{ margin: 0, padding: 0 }}>{content.view}</p>
-              <p style={{ margin: 0, padding: 0 }}>{content.timeRelease}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div
+      style={{
+        display: "flex",
+        margin: "0 20px",
+        width: "100vw%",
+        overflowX: "auto",
+        whiteSpace: "nowrap"
+      }}
+    >
+      {contents.map((content) => (
+       <CardStyle1 content={content}/>
+      ))}
     </div>
   );
 }

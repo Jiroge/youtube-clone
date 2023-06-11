@@ -2,18 +2,16 @@ import React from "react";
 
 import Navbar from "./Navbar";
 import LeftMenuBar from "./LeftMenuBar";
-import Main from "./Main";
+import Recommended from "./Main-recommended";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Navbar />
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex"}}>
         <LeftMenuBar />
-        <Main/>
+        <Recommended />
       </div>
     </div>
   );
 }
-
-export default App;
