@@ -1,8 +1,7 @@
 import React from "react";
-import Trending from "./Main-trending";
-import CardStyle1 from "./components/CardStyle1";
+import CardStyle2 from "../CardStyle2";
 
-export default function Recommended() {
+export default function WatchAgain() {
   const contents = [
     {
       image: "https://shorturl.at/wxIQV",
@@ -47,16 +46,15 @@ export default function Recommended() {
       timeRelease: "2 months ago",
     },
   ];
+
   return (
-    <div style={{display: "block", margin: "0 20px", width: "80vw"}}>
-      <h2 style={{margin: 0}}>Recommended</h2>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div style={{ width: "30%" }}>
+      <h2 style={{ margin: 0 }}>Watch Again</h2>
+      <div style={{ overflowY: "auto", whiteSpace: "nowrap", height: "100%"}}>
         {contents.map((content) => (
-          <CardStyle1 content={content}/>
-          ))}
+          <CardStyle2 content={content} />
+        ))}
       </div>
-      <h2 style={{margin: 0}}>Trending</h2>
-      <Trending />
     </div>
   );
 }

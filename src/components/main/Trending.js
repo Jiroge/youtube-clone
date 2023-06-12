@@ -1,5 +1,5 @@
 import React from "react";
-import CardStyle1 from "./components/CardStyle1";
+import CardStyle1 from "../CardStyle1";
 
 export default function Trending() {
   const contents = [
@@ -51,9 +51,10 @@ export default function Trending() {
       style={{
         display: "flex",
         margin: "0 20px",
-        width: "100vw%",
         overflowX: "auto",
-        whiteSpace: "nowrap"
+        whiteSpace: "nowrap",
+        backgroundColor: "#fff",
+        zIndex: 2
       }}
     >
       {contents.map((content) => (
