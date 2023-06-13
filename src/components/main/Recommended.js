@@ -62,7 +62,7 @@ export default function Recommended() {
           <h2 style={{ margin: 0 }}>Recommended</h2>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {contents.map((content) => (
-              <CardStyle1 content={content} />
+              <CardStyle1 content={content} key={content.image}/>
             ))}
           </div>
         </div>

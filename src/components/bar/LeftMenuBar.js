@@ -7,6 +7,7 @@ import {
   BiUserCircle,
 } from "react-icons/bi";
 import { GrYoutube } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 function DisplayMenu(props) {
   return (
@@ -14,15 +15,24 @@ function DisplayMenu(props) {
       {props.list.map((item) => (
         <li
           style={{
-            display: "flex",
             marginTop: "10px",
-            height: "40px",
             cursor: "pointer",
           }}
           key={item.name}
         >
-          <item.icon size={30} style={{ margin: "auto 0 auto 10px" }} />
-          <p style={{ margin: "auto 0 auto 10px", pading: 0 }}>{item.name}</p>
+          <Link
+            to={`/${item.name}`}
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+              display: "flex",
+              height: "40px",
+              marginTop: "10px",
+            }}
+          >
+            <item.icon size={30} style={{ margin: "auto 0 auto 10px" }} />
+            <p style={{ margin: "auto 0 auto 10px", pading: 0 }}>{item.name}</p>
+          </Link>
         </li>
       ))}
     </ul>
@@ -74,16 +84,25 @@ export default function LeftMenuBar() {
           {mockupSubscription.map((channel) => (
             <li
               style={{
-                display: "block",
                 cursor: "pointer",
                 padding: "4px",
               }}
               key={channel.profileName}
             >
-              <channel.profile size={30} style={{ margin: "0 0 0 8px" }} />
-              <p style={{ margin: "auto 0", pading: 0, fontSize: "0.6rem" }}>
-                {channel.profileName}
-              </p>
+              <Link
+                to={`/${channel.profileName}`}
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "block",
+                  marginTop: "10px",
+                }}
+              >
+                <channel.profile size={30} style={{ margin: "0 0 0 8px" }} />
+                <p style={{ margin: "auto 0", pading: 0, fontSize: "0.6rem" }}>
+                  {channel.profileName}
+                </p>
+              </Link>
             </li>
           ))}
         </ul>

@@ -52,7 +52,7 @@ export default function WatchAgain() {
       <h2 style={{ margin: 0 }}>Watch Again</h2>
       <div style={{ overflowY: "auto", whiteSpace: "nowrap", height: "100%"}}>
         {contents.map((content) => (
-          <CardStyle2 content={content} />
+          <CardStyle2 content={content} key={content.image}/>
         ))}
       </div>
     </div>

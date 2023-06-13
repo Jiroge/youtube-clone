@@ -1,17 +1,17 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/bar/Navbar";
-import LeftMenuBar from "./components/bar/LeftMenuBar";
-import Recommended from "./components/main/Recommended";
+import Home from "./page/Home";
+import NoPage from "./page/NoPage";
 
 export default function App() {
   return (
-    <div>
-      <Navbar />
-      <div style={{ display: "flex"}}>
-        <LeftMenuBar />
-        <Recommended />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

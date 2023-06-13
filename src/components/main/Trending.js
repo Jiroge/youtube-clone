@@ -58,7 +58,7 @@ export default function Trending() {
       }}
     >
       {contents.map((content) => (
-       <CardStyle1 content={content}/>
+       <CardStyle1 content={content} key={content.image}/>
       ))}
     </div>
   );
