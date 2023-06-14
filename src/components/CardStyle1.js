@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CardStyle1(props) {
+  const navigate = useNavigate();
+
   return (
-    <div style={{ margin: "15px" }}>
+    <div
+      style={{ margin: "15px", cursor: "pointer" }}
+      onClick={() => navigate("/Content", { state: {data: props.content} })}
+    >
       <img
         src={props.content.image}
         alt={props.content.title}

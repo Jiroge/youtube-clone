@@ -5,12 +5,12 @@ import Recommended from "../components/main/Recommended";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
       <div style={{ display: "flex" }}>
         <LeftMenuBar />
         <Recommended />
       </div>
-    </div>
+    </>
   );
 }
