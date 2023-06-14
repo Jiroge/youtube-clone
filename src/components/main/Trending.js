@@ -54,7 +54,9 @@ export default function Trending() {
         overflowX: "auto",
         whiteSpace: "nowrap",
         backgroundColor: "#fff",
-        zIndex: 2
+        zIndex: 2,
+        border: "1px solid",
+        borderRadius: "10px"
       }}
     >
       {contents.map((content) => (

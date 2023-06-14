@@ -23,8 +23,8 @@ export default function CardStyle1(props) {
           justifyContent: "space-between",
         }}
       >
-        <p style={{ margin: 0, padding: 0 }}>{props.content.view}</p>
-        <p style={{ margin: 0, padding: 0 }}>{props.content.timeRelease}</p>
+        <p style={{ margin: 0, padding: 0, color: "#b5b5b5" }}>{props.content.view}</p>
+        <p style={{ margin: 0, padding: 0, color: "#b5b5b5" }}>{props.content.timeRelease}</p>
       </div>
     </div>
   );
